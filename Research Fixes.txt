@@ -1,0 +1,11 @@
+ Research Fixes
+
+
+Severity        Plugin Name (Shortened)	Fix / Mitigation
+
+Critical	OpenSSL (CentOS 6/7)	Upgrade to the latest secure OpenSSL version via yum update openssl or apply related security patch.
+Critical	glibc (CentOS 7)	Affects core libc functions—apply the patch from CentOS repo: yum update glibc or dnf update glibc. Restart system afterward.
+High	        graphite2 (CentOS 7)	Update the package using: yum update graphite2 or remove if not used.
+High	        kernel (CentOS 7)	Critical! Run: yum update kernel and reboot system to load patched kernel.
+High	        mariadb (CentOS 7)	Database risk. Patch using: yum update mariadb. Ensure services are backed up before upgrade.
+Medium	        bind, ipa, libssh2,	These medium vulnerabilities should also be patched using: yum update [package-name]. Restart related services         
